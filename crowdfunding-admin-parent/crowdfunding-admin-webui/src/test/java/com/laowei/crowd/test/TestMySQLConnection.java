@@ -2,6 +2,7 @@ package com.laowei.crowd.test;
 
 import com.laowei.crowdfunding.entity.Admin;
 import com.laowei.crowdfunding.mapper.AdminMapper;
+import com.laowei.crowdfunding.service.api.AdminService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -19,12 +20,18 @@ import java.sql.SQLException;
  * @Create：2020-07-14 11:17
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = {"classpath:Spring/spring-persist-mybatis.xml"})
+@ContextConfiguration(locations = {"classpath:Spring/spring-persist-*.xml"})
 public class TestMySQLConnection {
     @Autowired
     private DataSource dataSource;
     @Autowired
     private AdminMapper adminMapper;
+    @Autowired
+    private AdminService adminService;
+    @Test
+    public void testAdminServiceMethod(){
+        adminService.saveAdmin(new Admin(null,"1003","666","admin2","admin2@163.com",null));
+    }
     @Test
     public void TestConnection(){
         try {
