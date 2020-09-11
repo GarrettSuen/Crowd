@@ -19,7 +19,7 @@
         <!-- Spring版本 -->
         <spring-version>4.3.20.RELEASE</spring-version>
         <!--    Spring Security版本    -->
-        <spring-Security-version>4.2.10.RELEASE</spring-Security-version>
+        <spring-security-version>4.2.10.RELEASE</spring-security-version>
     </properties>
 
     <!--  工程所需依赖  -->
@@ -172,21 +172,21 @@
             <dependency>
                 <groupId>org.springframework.security</groupId>
                 <artifactId>spring-security-web</artifactId>
-                <version>4.2.10.RELEASE</version>
+                <version>${spring-security-version}</version>
             </dependency>
 
             <!-- Spring Security 配置 -->
             <dependency>
                 <groupId>org.springframework.security</groupId>
                 <artifactId>spring-security-config</artifactId>
-                <version>4.2.10.RELEASE</version>
+                <version>${spring-security-version}</version>
             </dependency>
 
             <!-- Spring Security 标签库 -->
             <dependency>
                 <groupId>org.springframework.security</groupId>
                 <artifactId>spring-security-taglibs</artifactId>
-                <version>4.2.10.RELEASE</version>
+                <version>${spring-security-version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

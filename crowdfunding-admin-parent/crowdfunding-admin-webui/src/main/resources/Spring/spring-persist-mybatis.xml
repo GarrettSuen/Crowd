@@ -25,6 +25,22 @@ http://www.springframework.org/schema/mvc http://www.springframework.org/schema/
         <property name="mapperLocations" value="classpath:Mybatis/mapper/*Mapper.xml"/>
         <!-- 指定数据源 -->
         <property name="dataSource" ref="dataSource"/>
+        <!-- 配置插件 -->
+        <property name="plugins">
+            <array>
+                <!-- 配置PageHelp属性 -->
+                <bean class="com.github.pagehelper.PageHelper">
+                    <property name="properties">
+                        <props>
+                            <!-- 配置数据库语言 -->
+                            <prop key="dialect">mysql</prop>
+                            <!-- 配置页码合理化修正 -->
+                            <prop key="reasonable">true</prop>
+                        </props>
+                    </property>
+                </bean>
+            </array>
+        </property>
     </bean>
 
     <!-- 配置MapperScannerConfigurer来扫描Mapper接口所在的包 -->
