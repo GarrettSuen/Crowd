@@ -19,7 +19,7 @@
         <!-- Spring版本 -->
         <spring-version>4.3.20.RELEASE</spring-version>
         <!--    Spring Security版本    -->
-        <spring-security-version>4.2.10.RELEASE</spring-security-version>
+        <spring-security-version>5.2.10.RELEASE</spring-security-version>
     </properties>
 
     <!--  工程所需依赖  -->
