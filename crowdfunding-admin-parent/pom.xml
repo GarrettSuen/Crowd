@@ -17,7 +17,7 @@
     <!-- 统一管理Spring 和 SpringS ecurity的版本   -->
     <properties>
         <!-- Spring版本 -->
-        <spring-version>4.3.20.RELEASE</spring-version>
+        <spring-version>5.3.18</spring-version>
         <!--    Spring Security版本    -->
         <spring-security-version>4.2.10.RELEASE</spring-security-version>
     </properties>
